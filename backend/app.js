@@ -7,8 +7,8 @@ const cookieParser = require("cookie-parser");
 // const cors = require("cors");
 const expressValidator = require("express-validator");
 
+const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
-
 const app = express();
 
 mongoose
@@ -23,7 +23,8 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(expressValidator());
 
-app.use("/api", userRoutes);
+app.use("/api", authRoutes);
+app.use("/private/:userId", userRoutes);
 
 const port = process.env.PORT || 8000;
 app.listen(port, () => {
