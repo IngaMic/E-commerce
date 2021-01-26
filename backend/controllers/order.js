@@ -30,7 +30,7 @@ exports.create = (req, res) => {
                 error: errorHandler(error),
             });
         }
-        // send email alert to admin
+        // email alert to admin
         // order.address
         // order.products.length
         // order.amount
@@ -57,7 +57,7 @@ exports.listOrders = (req, res) => {
         .exec((err, orders) => {
             if (err) {
                 return res.status(400).json({
-                    error: errorHandler(error),
+                    error: errorHandler(err),
                 });
             }
             res.json(orders);

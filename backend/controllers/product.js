@@ -245,6 +245,7 @@ exports.listSearch = (req, res) => {
     const query = {};
     // assigning search value to query.name
     if (req.query.search) {
+        //regular expression capibilities; i is for case
         query.name = { $regex: req.query.search, $options: "i" };
         // assigning category value to query.category
         if (req.query.category && req.query.category != "All") {
