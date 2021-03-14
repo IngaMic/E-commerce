@@ -9,14 +9,19 @@ Payment system relies on braintree.
 All features are mobile responsive. 
 </br>
 </br>
-# Deployment</br>
+
+### Deployment </br>
 https://rombo.herokuapp.com/
 </br>
 </br>
-# Development</br>
+
+### Development </br>
 React </br>
 JavaScript  </br>
 MongoDB  </br>
 Node.js  </br>
 Express.js  </br>
-CSS 
+CSS  </br>
+</br>
+
+![](shop.gif)
